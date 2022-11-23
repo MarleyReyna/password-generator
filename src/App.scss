@@ -1,0 +1,47 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 1rem;
+  background: #08070B;
+  font-family: 'JetBrains Mono';
+}
+
+button, input{
+  font-family: 'JetBrains Mono';
+}
+
+header{
+  h1{
+    font-size: 16px;
+    line-height: 21px;
+    color: #817D92;
+  }
+}
+
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+@media only screen and (min-width: 48rem){
+  header{
+    h1{
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
