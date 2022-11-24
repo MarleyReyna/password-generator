@@ -1,5 +1,5 @@
 import './Main.scss'
-import * as $ from 'jquery';
+import $ from 'jquery';
 import React, { useEffect, useState } from 'react';
 import {Passwords, Strengths} from '../../Passwords';
 
