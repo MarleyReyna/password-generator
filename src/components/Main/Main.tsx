@@ -59,7 +59,6 @@ const Main = () => {
 
     const handleChecked = (e: React.FormEvent): void =>{
         e.preventDefault();
-        console.log(e.type)
         const $inputs = $('#password-props :input')
         const helper = ['upper', 'lower', 'numbers', 'symbols']
 
@@ -76,8 +75,6 @@ const Main = () => {
                parameters[key] = Passwords[key]
             }
         }
-        
-        console.log(parameters)
 
         createPassword(parameters)
     }
