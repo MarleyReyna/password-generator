@@ -1,4 +1,4 @@
-import './Main.scss'
+import './Main.scss';
 import $ from 'jquery';
 import React, { useEffect, useState } from 'react';
 import {Passwords, Strengths} from '../../Passwords';
