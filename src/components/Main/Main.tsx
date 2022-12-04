@@ -41,6 +41,14 @@ const Main = () => {
         e.preventDefault()
         const textCopy = $('#password').val() as string;
         navigator.clipboard.writeText(textCopy);
+
+        $('.CopyModal').addClass('appear')
+        $('.App').addClass('copy')
+
+        setTimeout(() =>{
+            $('.CopyModal').removeClass('appear')
+            $('.App').removeClass('copy')
+        }, 1700)
     }
 
     const createPassword = (parameters: object): void =>{

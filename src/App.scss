@@ -1,3 +1,24 @@
+@keyframes check{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes loadIn{
+  0%{
+    opacity: 0;
+    transform: translateY(-50vh);
+  }
+  50%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+}
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -14,6 +35,22 @@
   padding: 0 1rem;
   background: #08070B;
   font-family: 'JetBrains Mono';
+}
+
+
+.App.copy{
+  position: relative;
+}
+
+.App.copy::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  position: absolute;
+  background: #151619;
+  opacity: 0.5;
 }
 
 button, input{
@@ -35,6 +72,44 @@ header{
   width:1px;
   height:1px;
   overflow:hidden;
+}
+
+.CopyModal{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  color: #E6E5EA;
+  background-color: #151619;
+  padding: 1rem 0;
+  width: 250px;
+  border-radius: 10px;
+
+  p{
+    margin-right: .5rem;
+  }
+
+
+  .line-one{
+    stroke-dasharray: 15;
+    stroke-dashoffset: 15;
+    animation: check 600ms linear forwards;
+    animation-iteration-count: 1;
+  }
+
+  .line-two{
+    stroke-dasharray: 20;
+    stroke-dashoffset: 20;
+    animation: check 250ms linear forwards;
+    animation-iteration-count: 1;
+    animation-delay: 250ms;
+  }
+}
+
+.CopyModal.appear{
+  display: flex;
+  z-index: 10;
+  animation: loadIn 2500ms ease infinite;
 }
 
 @media only screen and (min-width: 48rem){
