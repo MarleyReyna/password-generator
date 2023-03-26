@@ -1,6 +1,12 @@
-#Hey
+# Hey,
+This app allows you to: 
+1. Generate a password of up to 20 characters long
+2. Select parameters for the content of the generated password
+3. See the strength of the generated password
+4. Directly copy the password for use in other applications or websites
 
-## Password Generator App built with:
+
+## Built with:
 - React
 - Typescript
 - Scss
