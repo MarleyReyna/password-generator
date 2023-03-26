@@ -1,4 +1,6 @@
-# Password Generator App built with:
+#Hey
+
+## Password Generator App built with:
 - React
 - Typescript
 - Scss
