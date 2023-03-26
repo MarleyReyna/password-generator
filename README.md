@@ -9,6 +9,6 @@ This app allows you to:
 ## Built with:
 - React
 - Typescript
-- Scss
+- SCSS
 
 ![password-thumbnail](https://user-images.githubusercontent.com/88505235/203875869-2bd40560-bb71-4f81-ad36-3ed7dc480103.png)
