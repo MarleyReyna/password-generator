@@ -3,16 +3,16 @@ import $ from 'jquery';
 import React, { useEffect, useState } from 'react';
 import {Passwords, Strengths} from '../../Passwords';
 
+export const getRandomInt = (max: number) => {
+    return Math.floor(Math.random() * max);
+}
+
 const Main = () => {
     const [length, setLength] = useState(($('#characters').val()));
     const [password, setPassword] = useState('PTx1f5DaFX');
     const [strength, setStrength] = useState(2);
 
-    function getRandomInt(max: number): number {
-        return Math.floor(Math.random() * max);
-    }
-
-    const checkStrength = (parameters: object): void =>{
+    const checkStrength = (parameters: object) =>{
         let newStrength = 0;
         $('.level').css('background-color', 'transparent')
         $('.level').css('border-color', '#E6E5EA')
@@ -37,7 +37,7 @@ const Main = () => {
         setStrength((c) => c = newStrength)
     }
 
-    const copyPassword = (e: React.FormEvent): void =>{
+    const copyPassword = (e: React.FormEvent) =>{
         e.preventDefault()
         const textCopy = $('#password').val() as string;
         navigator.clipboard.writeText(textCopy);
@@ -49,20 +49,6 @@ const Main = () => {
             $('.CopyModal').removeClass('appear')
             $('.App').removeClass('copy')
         }, 1700)
-    }
-
-    const createPassword = (parameters: object): void =>{
-        let passypass = ''
-        if(Object.keys(parameters).length === 0) return;
-        
-        for(let i=0; i < Number(length); i++){
-            let parameter = getRandomInt(Object.keys(parameters).length)
-            let key: any = Object.values(parameters)[parameter];
-            passypass += key[getRandomInt(key.length)]
-        }
-
-        checkStrength(parameters)
-        setPassword(c => c = passypass)
     }
 
     const handleChecked = (e: React.FormEvent): void =>{
@@ -87,9 +73,23 @@ const Main = () => {
         createPassword(parameters)
     }
 
+    const createPassword = (parameters: object) =>{
+        let passypass = ''
+        if(Object.keys(parameters).length === 0) return;
+        
+        for(let i=0; i < Number(length); i++){
+            let parameter = getRandomInt(Object.keys(parameters).length)
+            let key: any = Object.values(parameters)[parameter];
+            passypass += key[getRandomInt(key.length)]
+        }
+
+        checkStrength(parameters)
+        setPassword(c => c = passypass)
+    }
+
     useEffect(() =>{
         setLength(($('#characters').val()))
-    })
+    }, [])
 
     useEffect(() =>{
         for (let i = 0; i < strength + 1; i++){

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './App.scss';
 import CopyModal from './components/CopyModal';
 import Header from './components/Header';

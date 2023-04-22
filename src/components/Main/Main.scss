@@ -41,7 +41,7 @@ main{
             svg{
                 path{
                     fill: #A4FFAF;
-                    transition: all 300ms ease;
+                    transition: fill 300ms ease;
                 }
             }
         }
@@ -138,7 +138,9 @@ main{
                     height: 20px;
                     border: 2px solid white;
                     margin-right: 1.25rem;
-                    transition: all 300ms ease;
+                    cursor: pointer;
+                    transition: 300ms ease;
+                    transition-property: border, background-color;
 
                     svg{
                         display: none;
@@ -146,7 +148,6 @@ main{
                 }
 
                 .checkbox:hover{
-                    cursor: pointer;
                     border: 2px solid #A4FFAF;
                     background-color: #A4FFAF;
                 }
@@ -191,7 +192,8 @@ main{
                     width: 10px;
                     height: 28px;
                     border: 2px solid #E6E5EA;
-                    transition: all ease 300ms;
+                    transition: ease 300ms;
+                    transition-property: background-color, border-color;
                 }
 
                 .level:nth-child(2){
@@ -217,7 +219,9 @@ main{
             text-transform: uppercase;
             border: 2px solid #A4FFAF;
             background-color: #A4FFAF;
-            transition: all 300ms ease;
+            cursor: pointer;
+            transition: 300ms ease;
+            transition-property: color, background-color;
 
             svg{
                 margin-left: 1.5rem;
@@ -230,7 +234,6 @@ main{
         }
 
         button:hover{
-            cursor: pointer;
             color: #A4FFAF;
             background-color: transparent;
             
