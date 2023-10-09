@@ -26,7 +26,8 @@ const Main = () => {
             passypass += key[getRandomInt(key.length)]
         }
 
-        const newStrength = getStrength(length, parameters)
+        const newStrength = getStrength(strength, length, parameters)
+        console.log(newStrength)
 
         setStrength((c) => (c = newStrength))
         setPassword((c) => (c = passypass))
