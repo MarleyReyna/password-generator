@@ -27,7 +27,6 @@ const Main = () => {
         }
 
         const newStrength = getStrength(strength, length, parameters)
-        console.log(newStrength)
 
         setStrength((c) => (c = newStrength))
         setPassword((c) => (c = passypass))
