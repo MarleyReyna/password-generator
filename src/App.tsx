@@ -1,7 +1,8 @@
-import './App.scss';
+import './assets/App.scss';
+import './assets/Main.scss'
 import CopyModal from './components/CopyModal';
 import Header from './components/Header';
-import Main from './components/Main/Main';
+import Main from './containers/Main/Main';
 
 
 
